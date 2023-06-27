@@ -13,6 +13,5 @@
 Baixe os arquivos e faça a importação via GUI, ou jogue na pasta de Scripts e rode:
 
 sudo su - tactical
-cd /opt/trmm-community-scripts
+cd /rmm/
 ./update.sh --force
-
