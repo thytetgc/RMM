@@ -18,7 +18,7 @@ then
     max="90"
 fi
 
-output=$(df -h | grep -vE '^Filesystem|tmpfs|cdrom|udev' | awk '$5 ~ /%$/ {print $5 " " $1 }')
+output=$(df -h | grep -vE '^Filesystem|tmpfs|cgmfs|cdrom|udev' | awk '$5 ~ /%$/ {print $5 " " $1 }')
 
 IFS=$'\n'
 for disk in $output; do
@@ -27,9 +27,9 @@ for disk in $output; do
     
     if [ ${usep} -le $max ]; then
         echo "Disk $partition usage less than $max%. ($usep%)"
-        exit 0
+#        exit 0
     else
         echo "Disk $partition usage greater than $max%. ($usep%)"
-        exit 1
+#        exit 1
     fi
 done
