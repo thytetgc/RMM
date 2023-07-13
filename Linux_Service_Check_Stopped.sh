@@ -26,8 +26,8 @@ fi
 
 failsvc=$(sudo systemctl is-failed "$service")
 
-if [[ "$failsvc" == *"inactive"* ]]; then
-    echo -e 'You have failed '$service''
+if [[ "$failsvc" != 'active' ]]; then
+    echo -e ''$service' is not active'
     echo -e 'Restarting the service'
 sudo systemctl restart "$service"
     exit 1
