@@ -1,4 +1,0 @@
-cd /opt/
-curl -k https://raw.githubusercontent.com/netvolt/LinuxRMM-Script/main/rmmagent-linux.sh > /opt/rmmagent-linux.sh ; chmod +x /opt/rmmagent-linux.sh
-/opt/rmmagent-linux.sh install 'https://mesh.hostlp.cloud/meshagents?id=OgDqCiqu4panFb8UUTLpW6LAdH8nhTg%24hk3KQnpNebe%405thix56bYosqY1j0cwDY&installflags=0&meshinstall=6' \
-'https://api.hostlp.cloud' 1 125 '418fae3f986a5094a4833dfb899da2a084147cd37b38a04209dc8c4f40c2c30c' 'server'
